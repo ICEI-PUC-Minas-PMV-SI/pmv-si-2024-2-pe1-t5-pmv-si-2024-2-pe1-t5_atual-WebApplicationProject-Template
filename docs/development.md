@@ -1,42 +1,62 @@
-# Programação de Funcionalidades
+# Especificações do Projeto
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+## Personas
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo.
+1 - Maria Luiza tem 41 anos, mãe do Lucas de 7 anos e da Maria Clara de 4. Ela cuida da casa e das crianças enquanto o marido trabalha. Depois de ter filhos ela descuidou da saúde e ganhou muito peso. Ela não pratica nenhuma atividade física e está com IMC de 30,5(obesidade grau 1). Ela precisa de consultar com um nutricionista virtualmente pois não tem com quem deixar os filhos.
 
-O professor Rommel Carneiro apresenta alguns exemplos prontos para serem utilizados como referência:
-- Login do sistema: [https://repl.it/@rommelpuc/LoginApp](https://repl.it/@rommelpuc/LoginApp) 
-- Cadastro de Contatos: [https://repl.it/@rommelpuc/Cadastro-de-Contatos](https://repl.it/@rommelpuc/Cadastro-de-Contatos)
+2 - João Barbosa tem 57 anos, trabalha na lavoura com sua família. Tem um estilo de vida bem ativo, mas não se alimenta de forma adequada, ficando horas sem comer e não consumindo os nutrientes necessários. Ele está buscando uma forma de melhorar a alimentação para assim ter mais disposição no seu dia a dia.
 
+3 - Carlos Eduardo, tem 22 anos é um o jovem Atleta.
+Carlos treina três vezes por semana e quer melhorar seu desempenho nos esportes. Ele procura um profissional de nutrição esportiva para lhe orientar sobre a alimentação e ajudá-lo a alcançar seus objetivos de forma saudável e segura.
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+## Histórias de Usuários
 
-## Exemplo
+Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-## Requisitos Atendidos
+|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
+|--------------------|------------------------------------|----------------------------------------|
+|Administrador  | Gerenciar cadastros           | Excluir usuários com atitudes impróprias             |
+|Administrador       | De colher feedbacks                 | Saber o nível de satisfação dos usuários |
+|Administrador       | Gerar relatórios gerenciais        | Acompanhar a evolução da NutriSoul |
+|Nutricionista       | Ter uma agenda atualizada        | Para que os pacientes possam agendar suas consultas |
+|Nutricionista       | Ter suporte  | Para solucionar problemas tecnicos |
+|Nutricionista       | Fazer anotações durante as teleconsultas | Para informações importantes |
+|Paciente       | Opções de pagamento                | Mais praticidade |
+|Paciente       | Cancelar ou remarcar consulta      | Em caso de imprevisto |
+|Paciente       | Dicas de saúde e receitas          | Melhorar minha alimentação |
 
-As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais que relacionam o escopo do projeto com os artefatos criados:
+## Requisitos
+
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito | Responsável | Artefato Criado |
-|------|------------------------|------------|-----------------|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | João | index.html |
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês | Ana Paula | cadastro-noticia.html |
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RF-001| Realizar cadastro de acordo com o perfil | Alta | 
+|RF-002| Recuperar senha  | Alta |
+|RF-003| Gerenciar consultas  | Média |
+|RF-004| Visualizar perfil do nutricionista  | Média |
+|RF-005| Coletar feedback após cada consulta |Baixa|
+|RF-006| Permitir troca de mensagens entre nutricionista e paciente | Baixa|
 
-## Descrição das estruturas:
+### Requisitos não Funcionais
 
-## Notícia
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Id             | Numero (Inteiro)  | Identificador único da notícia            | 1                                              |
-| Título         | Texto             | Título da notícia                         | Sistemas de Informação PUC Minas é o melhor                                   |
-| Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
-| Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
+|ID     | Descrição do Requisito  |Prioridade |
+|-------|-------------------------|----|
+|RNF-001| Ter compatibilidade com diferentes navegadores | Alta | 
+|RNF-002| Ser responsivo |  Alta | 
+|RNF-003| Seguir normas da LGPD |  Alta |
+|RNF-004| Suportar alto número de usuários ativos e consultas simultâneas|  Média| 
+|RNF-005| Tempo de resposta ao abrir a página inferior a 2 segundos|  Média| 
+
+## Restrições
+
+O projeto está restrito pelos itens apresentados na tabela a seguir.
+
+|ID| Restrição                                             |
+|--|-------------------------------------------------------|
+|01| O projeto deverá ser entregue até o final do semestre |
+|02| Não pode ser desenvolvido um módulo de backend        |
+
 
