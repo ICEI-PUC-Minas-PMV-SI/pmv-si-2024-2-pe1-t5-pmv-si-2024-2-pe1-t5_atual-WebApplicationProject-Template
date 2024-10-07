@@ -9,9 +9,8 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 A interface da plataforma foi desenvolvida com o objetivo de conectar os usuários de forma engajadora, dinamica e intuitiva. O User Flow foi cuidadosamente elaborado para priorizar a experiencia do usuário, garantindo que cada etapa do processo seja intuitiva e satisfatória.
 
-### User Flow: Usuário Doador
-
-![Flowchart](https://github.com/user-attachments/assets/b49b4eef-4f79-4410-9d7e-dcf124695051)
+### Páginas principais
+O user flow conta com cinco páginas, sendo tres delas compartilhadas entre ambos os usuários:
 
 1. Home
   
@@ -26,13 +25,17 @@ A interface da plataforma foi desenvolvida com o objetivo de conectar os usuári
    
    A página disponibilizará as principais noticias relacionadas aos temas abordados pelas organizações, além das principais discussões acerca destes assuntos nas mídias. Ela será alimentada pela equipe criadora da plataforma com o intuito de manter nossos usuários informadoos, além de incentiva-los a se manter engajados nas causas.
 
-4. Eventos
-   
-   A página de eventos irá conter as ações cadastrados pelas Instituições da plataforma, permitindo que os usuários doadores se inscrevam nestes eventos. 
+### User Flow: Usuário Doador
 
-5. Perfil do Usuário
-    
-    O perfil do usuário irá possibilitar que o doador:
+![Flowchart](https://github.com/user-attachments/assets/b49b4eef-4f79-4410-9d7e-dcf124695051)
+
+1. Eventos
+   
+   A página de eventos para o usuário doador, irá conter as ações cadastrados pelas Instituições da plataforma, permitindo que os usuários doadores se inscrevam nestes eventos. 
+
+2. Perfil do Usuário
+   
+    O perfil do usuário doador irá possibilitar que ele:
 - Visualize e edite suas informações pessoais;
 - Visualize e edite as informações preferenciais;
 - Visualize e exclua ONGs favoritas;
@@ -42,6 +45,19 @@ A interface da plataforma foi desenvolvida com o objetivo de conectar os usuári
 ### User Flow: Usuário ONG
 
 ![Flowchart (1)](https://github.com/user-attachments/assets/aceb0969-c2cd-49ac-a51b-28e2ce4c8d83)
+
+1. Eventos
+
+   A página de eventos para o usuário ONG, irá conter os eventos cadastrados listados, disponibilizando as opções para criar um novo evento e editar eventos já criados por elas.
+   
+3. Perfil do Usuário
+
+   O perfil do usuário ONG irá possibilitar que ele:
+   - Visualize as principais métricas do mes;
+   - Exporte as métricas em formato PDF;
+   - Visualize e edite as informações principais da ONG;
+   - Visualize registros já criados, exclua e crie novos;
+   - Visualize projetos já criados, exclua e crie novos;
 
 
 ## Wireframes
