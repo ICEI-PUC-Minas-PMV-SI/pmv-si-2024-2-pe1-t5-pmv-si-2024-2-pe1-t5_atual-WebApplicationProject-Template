@@ -7,14 +7,36 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## User Flow
 
-![Exemplo de UserFlow](img/userflow.jpg)
+A interface da plataforma foi desenvolvida com o objetivo de conectar os usuários de forma engajadora, dinamica e intuitiva. O User Flow foi cuidadosamente elaborado para priorizar a experiencia do usuário, garantindo que cada etapa do processo seja intuitiva e satisfatória.
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
+### User Flow: Usuário Doador
 
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+![Flowchart](https://github.com/user-attachments/assets/b49b4eef-4f79-4410-9d7e-dcf124695051)
+
+1. Home
+Na página inicial estão dsponibilizados banners informativos com eventos e notícias de interesse dos usuários. Além disso, também estão disponíveis informações a respeito da plataforma, como la funciona, nossa missão, visão e valores, algumas das ONGs cadastradas e informações de contato. 
+
+2. Tela de Login e Cadastro
+A tela de login permite que o usuário se identifique e possa acessar a plataforma com seu perfil de nível "Doador".
+A tela de cadastro permite que o usuário escolha o nível de seu perfil entre "Doador" e "ONG" para depois, personalizar suas preferencias em causas que possue interesse, cidade, idade e demais dados.
+
+3. Notícias
+A página disponibilizará as principais noticias relacionadas aos temas abordados pelas organizações, além das principais discussões acerca destes assuntos nas mídias. Ela será alimentada pela equipe criadora da plataforma com o intuito de manter nossos usuários informadoos, além de incentiva-los a se manter engajados nas causas.
+
+4. Eventos
+A página de eventos irá conter as ações cadastrados pelas Instituições da plataforma, permitindo que os usuários doadores se inscrevam nestes eventos. 
+
+5. Perfil do Usuário
+O perfil do usuário irá possibilitar que o doador:
+- Visualize e edite suas informações pessoais;
+- Visualize e edite as informações preferenciais;
+- Visualize e exclua ONGs favoritas;
+- Visualize o histórico de ONGs recentemente visualizadas.
+
+
+### User Flow: Usuário ONG
+
+![Flowchart (1)](https://github.com/user-attachments/assets/aceb0969-c2cd-49ac-a51b-28e2ce4c8d83)
 
 
 ## Wireframes
