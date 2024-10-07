@@ -14,19 +14,24 @@ A interface da plataforma foi desenvolvida com o objetivo de conectar os usuári
 ![Flowchart](https://github.com/user-attachments/assets/b49b4eef-4f79-4410-9d7e-dcf124695051)
 
 1. Home
+  
    Na página inicial estão dsponibilizados banners informativos com eventos e notícias de interesse dos usuários. Além disso, também estão disponíveis informações a respeito da plataforma, como la funciona, nossa missão, visão e valores, algumas das ONGs cadastradas e informações de contato. 
 
 2. Tela de Login e Cadastro
+   
    A tela de login permite que o usuário se identifique e possa acessar a plataforma com seu perfil de nível "Doador".
    A tela de cadastro permite que o usuário escolha o nível de seu perfil entre "Doador" e "ONG" para depois, personalizar suas preferencias em causas que possue interesse, cidade, idade e demais dados.
 
 3. Notícias
+   
    A página disponibilizará as principais noticias relacionadas aos temas abordados pelas organizações, além das principais discussões acerca destes assuntos nas mídias. Ela será alimentada pela equipe criadora da plataforma com o intuito de manter nossos usuários informadoos, além de incentiva-los a se manter engajados nas causas.
 
 4. Eventos
+   
    A página de eventos irá conter as ações cadastrados pelas Instituições da plataforma, permitindo que os usuários doadores se inscrevam nestes eventos. 
 
 5. Perfil do Usuário
+    
     O perfil do usuário irá possibilitar que o doador:
 - Visualize e edite suas informações pessoais;
 - Visualize e edite as informações preferenciais;
