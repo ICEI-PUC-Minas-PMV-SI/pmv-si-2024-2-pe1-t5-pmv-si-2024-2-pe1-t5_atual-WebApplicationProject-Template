@@ -68,9 +68,13 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 
 A página inicial apresenta uma navigation bar no topo, permitindo o acesso as demais páginas da aplicação. A primeira seção da página possui um carrossel com banners informativos, enquanto na segunda seção há outro carrossel desmonstrativo com ONGs cadastradas na plataforma. Já a terceira seção possuí um paragrafo e dois cards explicativos sobre a plataforma, enquanto na quarta seção estão as informações de contato e uma área destinada ao mapa com o endereço de contato.
 
-![wireframe - home](https://github.com/user-attachments/assets/e3d6d995-6c58-48a7-86f2-568ffa960632)
+<img src="./img/img_docs/wireframe_home.png" alt="home" width="400"/>
 
-<img src="./img/img_docs/wireframe_home.png" alt="home" width="200"/>
+### Modal Login / Cadastro
+
+O modal de Login/Cadasto é aberto já na tela de Log In com os campos para colocar usuário e senha, e um botão com a opção de recuperar o acesso via "Esqueceu a senha". Possui a opção para mudar para a tela de cadastro onde serão mostrados os campos requeridos para se cadastrar na plataforma e qual é o nível do usuário, tendo as opções "Sou Doador" e "Sou ONG".
+
+<img src="./img/img_docs/wireframe_login_cadastro.png" alt="home" width="400"/>
 
 
 ### Exemplo
