@@ -70,7 +70,7 @@ A página inicial apresenta uma navigation bar no topo, permitindo o acesso as d
 
 ![wireframe - home](https://github.com/user-attachments/assets/e3d6d995-6c58-48a7-86f2-568ffa960632)
 
-<img src="./img/img - grupo/wireframe_home.jpg" alt="drawing" width="200"/>
+<img src=".img/img_docs/wireframe_home.jpg" alt="home" width="200"/>
 
 
 ### Exemplo
