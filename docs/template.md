@@ -16,7 +16,13 @@ Apresente a paleta de cores que será utilizada. Uma ferramenta interessante par
 
 ## Tipografia
 
-Apresente as fontes que serão utilizadas e sua função no site. As principais funções são: Título de página, Título de Seção, Rótulos de componentes e Corpo de Texto.
+### Poppins
+Função: Títulos de página e Títulos de Seção
+Link: https://fonts.google.com/specimen/Poppins
+
+### Roboto
+Função: Parágrafos e Descrições
+Link: https://fonts.google.com/specimen/Roboto
 
 
 ## Iconografia
