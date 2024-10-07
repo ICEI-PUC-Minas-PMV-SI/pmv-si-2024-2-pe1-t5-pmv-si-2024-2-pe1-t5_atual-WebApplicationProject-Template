@@ -36,10 +36,10 @@ O user flow conta com cinco páginas, sendo tres delas compartilhadas entre ambo
 2. Perfil do Usuário
    
     O perfil do usuário doador irá possibilitar que ele:
-- Visualize e edite suas informações pessoais;
-- Visualize e edite as informações preferenciais;
-- Visualize e exclua ONGs favoritas;
-- Visualize o histórico de ONGs recentemente visualizadas.
+    - Visualize e edite suas informações pessoais;
+    - Visualize e edite as informações preferenciais;
+    - Visualize e exclua ONGs favoritas;
+    - Visualize o histórico de ONGs recentemente visualizadas.
 
 
 ### User Flow: Usuário ONG
