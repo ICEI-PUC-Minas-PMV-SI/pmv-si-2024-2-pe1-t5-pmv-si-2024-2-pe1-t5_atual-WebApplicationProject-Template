@@ -64,6 +64,13 @@ O user flow conta com cinco páginas, sendo tres delas compartilhadas entre ambo
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface e é fundamental sempre relacionar cada wireframe com o(s) requisito(s) que ele atende.
 
+### Página Home
+
+A página inicial apresenta uma navigation bar no topo, permitindo o acesso as demais páginas da aplicação. A primeira seção da página possui um carrossel com banners informativos, enquanto na segunda seção há outro carrossel desmonstrativo com ONGs cadastradas na plataforma. Já a terceira seção possuí um paragrafo e dois cards explicativos sobre a plataforma, enquanto na quarta seção estão as informações de contato e uma área destinada ao mapa com o endereço de contato.
+
+![wireframe - home](https://github.com/user-attachments/assets/e3d6d995-6c58-48a7-86f2-568ffa960632)
+
+
 ### Exemplo
 
 A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
