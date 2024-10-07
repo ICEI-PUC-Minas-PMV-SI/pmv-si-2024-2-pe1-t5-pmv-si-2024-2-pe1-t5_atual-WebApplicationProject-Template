@@ -66,15 +66,30 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 
 ### Página Home
 
-A página inicial apresenta uma navigation bar no topo, permitindo o acesso as demais páginas da aplicação. A primeira seção da página possui um carrossel com banners informativos, enquanto na segunda seção há outro carrossel desmonstrativo com ONGs cadastradas na plataforma. Já a terceira seção possuí um paragrafo e dois cards explicativos sobre a plataforma, enquanto na quarta seção estão as informações de contato e uma área destinada ao mapa com o endereço de contato.
+A página inicial apresenta uma navigation bar no topo, permitindo o acesso as demais páginas da aplicação.
+- Primeira seção: Possui um carrossel com banners informativos que encaminham para a página de "noticias";
+- Segunda seção: Possui um carrossel desmonstrativo com ONGs cadastradas na plataforma;
+- Terceira seção: Possuí um paragrafo e dois cards explicativos sobre a plataforma;
+- Quarta seção: Contém as informações de contato e uma área destinada ao mapa com o endereço de contato.
 
 <img src="./img/img_docs/wireframe_home.png" alt="home" width="400"/>
+
 
 ### Modal Login / Cadastro
 
 O modal de Login/Cadasto é aberto já na tela de Log In com os campos para colocar usuário e senha, e um botão com a opção de recuperar o acesso via "Esqueceu a senha". Possui a opção para mudar para a tela de cadastro onde serão mostrados os campos requeridos para se cadastrar na plataforma e qual é o nível do usuário, tendo as opções "Sou Doador" e "Sou ONG".
 
-<img src="./img/img_docs/wireframe_login_cadastro.png" alt="home" width="400"/>
+<img src="./img/img_docs/wireframe_login_cadastro.png" alt="modal_login" width="400"/>
+
+
+### Perfil do usuário - ONG
+
+A página do perfil do usuário ONG apresenta uma navigation bar no topo, permitindo o acesso as demais páginas da aplicação.
+- Primeira seção: Possui uma seção na lateral esquerda com as principais informações da instituição e um botão para editar. No restante da seção, a direita, é apresentado o dashboard de métricas mensais da organização, onde também é disponibilizado a opção de gerar um arquivo PDF com a informações;
+- Segunda seção: Disponibiliza a opção para a criação de cards com imagens, titulo e descrição. Ao clicar no card, sera mostrado um modal com mais informações e a opção de "editar e "excluir";
+- Terceira seção: Disponibiliza a opção para a criação de cards com os projetos das intituições com imagem, titulo e descrição. Ao clicar no card, sera mostrado um modal com mais informações e a opção de "editar e "excluir";
+
+<img src="./img/img_docs/wireframe_perfil_ONGs.jpg" alt="perfil_ong" width="400"/>
 
 
 ### Exemplo
