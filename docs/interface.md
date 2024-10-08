@@ -91,11 +91,6 @@ A página do perfil do usuário ONG apresenta uma navigation bar no topo, permit
 
 <img src="./img/img_docs/wireframe_perfil_ONGs.jpg" alt="perfil_ong" width="400"/>
 
-### Perfil do doador - ONG
-Pagina "Perfil Doador" ira apresetar para o usuario ultimas interaçoes,ongs favoritas e a possibilidade de editar as informações do seu perfil.
-
-<img src="./img/img_docs/wireframe_perfil_doador_att.png" alt="perfil_ong" width="400"/>
-
 ### Página Listagem
 
 A página de listagem apresenta uma navigation bar no topo, permitindo o acesso as demais páginas da aplicação.
