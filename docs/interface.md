@@ -104,4 +104,15 @@ A página de listagem apresenta uma navigation bar no topo, permitindo o acesso 
 
 <img src="./img/img_docs/wireframe_listagem_ongs.png" alt="pagina_listagem" width="400"/>
 
+### Perfil do doador - ONG
+A página “Perfil do Doador” apresentará ao usuário suas últimas interações, ONGs favoritas e a possibilidade de editar as informações do seu perfil.
+
+<img src="./img/img_docs/wireframe_perfil_doador_att.png" alt="perfil_ong" width="400"/>
+
+### Noticias 
+A página de notícias, como o nome sugere, apresentará notícias sobre ONGs, pesquisas e um pouco dos seus trabalhos.
+
+- Na página inicial de notícias, as notícias com imagens estarão posicionadas no lado direito, enquanto as principais notícias, apenas com texto, estarão no lado esquerdo. Ao clicar em uma notícia, o usuário será redirecionado para a página de leitura.
+
+<img src="./img/img_docs/wireframe_noticias.png" alt="perfil_ong" width="400"/>
 
