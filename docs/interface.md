@@ -116,3 +116,8 @@ A página de notícias, como o nome sugere, apresentará notícias sobre ONGs, p
 
 <img src="./img/img_docs/wireframe_noticias.png" alt="perfil_ong" width="400"/>
 
+### Página de eventos 
+A página de listagem apresenta uma navigation bar no topo, permitindo o acesso as demais páginas da aplicação.
+
+<img src="./img/img_docs/wireframe_eventos.png" alt="pagina_eventos" width="400"/>
+
