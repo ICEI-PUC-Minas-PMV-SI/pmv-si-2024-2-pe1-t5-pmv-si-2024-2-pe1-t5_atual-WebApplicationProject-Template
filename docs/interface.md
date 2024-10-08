@@ -27,7 +27,7 @@ O user flow conta com cinco páginas, sendo tres delas compartilhadas entre ambo
 
 ### User Flow: Usuário Doador
 
-![Flowchart](https://github.com/user-attachments/assets/b49b4eef-4f79-4410-9d7e-dcf124695051)
+<img src="./img/img_docs/FluxoDoador.jpg" alt="home" width="1000"/>
 
 1. Eventos
    
