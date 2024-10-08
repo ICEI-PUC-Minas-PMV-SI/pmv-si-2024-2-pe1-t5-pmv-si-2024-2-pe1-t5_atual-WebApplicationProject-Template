@@ -96,18 +96,12 @@ Pagina "Perfil Doador" ira apresetar para o usuario ultimas interaçoes,ongs fav
 
 <img src="./img/img_docs/wireframe_perfil_doador_att.png" alt="perfil_ong" width="400"/>
 
-### Exemplo
+### Página Listagem
 
-A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
+A página de listagem apresenta uma navigation bar no topo, permitindo o acesso as demais páginas da aplicação.
+- Primeira seção: Possui uma barra lateral à esquerda com caixas de seleção, que funcionam como opções rápidas para filtrar a busca.
+- Segunda seção: Exibe os resultados da busca com informações principais sobre as ONGs, como imagem, nome e descrição, além de um botão para acessar o perfil de cada ONG.
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+<img src="./img/img_docs/wireframe_listagem_ongs.png" alt="pagina_listagem" width="400"/>
 
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+
