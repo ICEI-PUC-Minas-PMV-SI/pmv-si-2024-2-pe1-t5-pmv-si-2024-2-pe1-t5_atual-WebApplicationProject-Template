@@ -30,14 +30,38 @@ Link: https://fonts.google.com/specimen/Roboto
 
 ## Iconografia
 
-### Icone perfil
+### Icone Perfil
 
 O ícone permanecerá no lugar da foto do usuário até que ele decida trocá-lo.
 
-<img src="./img/img_docs/iconeUsuario.png" alt="home" width="100"/>
+<img src="./img/img_docs/icons/iconePerfil.png" alt="home" width="80"/>
 
-### Icone menu
+### Icone Menu
 
 O ícone de menu ficará no canto esquerdo da página de interface. Seu objetivo é ocultar ou mostrar os filtros ao ser clicado.
 
-<img src="./img/img_docs/iconeBarra.png" alt="home" width="100"/>
+<img src="./img/img_docs/icons/iconeMenu.png" alt="home" width="80"/>
+
+### Icone Calendario
+
+Ícone de calendário que ficara na pagina de eventos. Ao clicar, direciona para o contêiner de calendário abaixo.
+
+<img src="./img/img_docs/icons/iconeCalendario.png" alt="home" width="80"/>
+
+### Icone Compartilhamento
+
+Ícone para compartilhar. Ao clicar, abrirá um pop-up para escolher a rede social.
+
+<img src="./img/img_docs/icons/IconeCompartilha.png" alt="home" width="80"/>
+
+### Icone Telefone
+
+Ícone ilustrativo que ficará ao lado do número de telefone.
+
+<img src="./img/img_docs/icons/iconeTelefone.png" alt="home" width="80"/>
+
+### Icones Redes Sociais
+
+Ícones para compartilhar diretamente na rede específica.
+
+<img src="./img/img_docs/icons/IconeRedeSocial.png" alt="home" width="250"/>
