@@ -30,16 +30,14 @@ Link: https://fonts.google.com/specimen/Roboto
 
 ## Iconografia
 
-Defina os ícones que serão utilizados e suas respectivas funções.
+### Icone perfil
 
-Apresente os estilos CSS criados para cada um dos elementos apresentados.
-Outras seções podem ser adicionadas neste documento para apresentar padrões de componentes, de menus, etc.
+O ícone permanecerá no lugar da foto do usuário até que ele decida trocá-lo.
 
+<img src="./img/img_docs/iconeUsuario.png" alt="home" width="100"/>
 
-> **Links Úteis**:
->
-> -  [Como criar um guia de estilo de design da Web](https://edrodrigues.com.br/blog/como-criar-um-guia-de-estilo-de-design-da-web/#)
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+### Icone menu
+
+O ícone de menu ficará no canto esquerdo da página de interface. Seu objetivo é ocultar ou mostrar os filtros ao ser clicado.
+
+<img src="./img/img_docs/iconeBarra.png" alt="home" width="100"/>
