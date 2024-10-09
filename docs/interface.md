@@ -27,6 +27,8 @@ O user flow conta com cinco páginas, sendo tres delas compartilhadas entre ambo
 
 ### User Flow: Usuário Doador
 
+Link do User Flow: https://miro.com/app/board/uXjVLXatsi4=/
+
 <img src="./img/img_docs/FluxoDoador.jpg" alt="home" width="1000"/>
 
 1. Eventos
@@ -43,6 +45,8 @@ O user flow conta com cinco páginas, sendo tres delas compartilhadas entre ambo
 
 
 ### User Flow: Usuário ONG
+
+Link do User Flow: https://miro.com/app/board/uXjVLXatsi4=/
 
 ![Flowchart (1)](https://github.com/user-attachments/assets/aceb0969-c2cd-49ac-a51b-28e2ce4c8d83)
 
