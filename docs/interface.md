@@ -112,7 +112,10 @@ A página de notícias, como o nome sugere, apresentará notícias sobre ONGs, p
 <img src="./img/img_docs/wireframe_noticias.png" alt="perfil_ong" width="400"/>
 
 ### Página de eventos 
-A página de listagem apresenta uma navigation bar no topo, permitindo o acesso as demais páginas da aplicação.
+A página de listagem exibe uma barra de navegação no topo, permitindo o acesso às demais áreas da aplicação.
 
+- ONG: É possível visualizar e editar eventos já criados, além de criar novos eventos.
+- Doador: O usuário pode visualizar os próximos eventos, ver eventos favoritos, acessar uma listagem geral de eventos e um calendário com datas de eventos passados e futuros. Também é possível se voluntariar para participar dos eventos.
+  
 <img src="./img/img_docs/wireframe_eventos.png" alt="pagina_eventos" width="400"/>
 
