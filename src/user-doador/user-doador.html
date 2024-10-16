@@ -1,9 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuário</title>
+  <link rel="stylesheet" href="user-doador.css">
+</head>
+
+<body>
+  <header>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar...">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Notícias</a>
+        <a href="#">Eventos</a>
+        <a href="#">Quem Somos</a>
+        <img src="profile-icon.png" alt="Profile" class="profile-icon">
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <aside class="profile-info">
+      <div class="avatar"></div>
+      <ul>
+        <li>Nome</li>
+        <li>E-mail</li>
+        <li>Telefone</li>
+        <li>Endereço</li>
+        <li>Biografia</li>
+      </ul>
+      <textarea placeholder="Biografia"></textarea>
+      <button class="edit-btn">Editar</button>
+    </aside>
+
+    <main class="content">
+      <section class="favorites">
+        <h2>ONGs Favoritas</h2>
+        <div class="image-grid">
+          <img src="ong1.jpg" alt="ONG 1">
+          <img src="ong2.jpg" alt="ONG 2">
+          <img src="ong3.jpg" alt="ONG 3">
+        </div>
+      </section>
+
+      <section class="interactions">
+        <h2>Últimas Interações</h2>
+        <div class="image-grid">
+          <img src="interacao1.jpg" alt="Interação 1">
+          <img src="interacao2.jpg" alt="Interação 2">
+          <img src="interacao3.jpg" alt="Interação 3">
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer></footer>
+</body>
+
 </html>
