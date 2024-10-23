@@ -10,8 +10,12 @@ body {
 }
 
 header {
-    background-color: #4a90e2;
-    padding: 10px;
+    background-color: #4EABF1;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 40px;
 }
 
 .search-bar {
@@ -108,10 +112,4 @@ nav {
     height: 150px;
     border-radius: 15px;
     object-fit: cover;
-}
-
-footer {
-    background-color: #4a90e2;
-    height: 50px;
-    margin-top: 20px;
 }
