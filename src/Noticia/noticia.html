@@ -5,78 +5,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Notícia</title>
+    <link rel="stylesheet" href="../gerais/geral.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <main>
-        <div>
-            <span>Atualizado em <span id="diaatualiza"></span> de <span id="mesatualiza"></span> de <span
-                    id="anoatualiza"></span></span>
+    <header>
+        <div id="div-logotipo">
+            <img id="logotipo" src="https://cdn.icon-icons.com/icons2/2070/PNG/512/toucan_icon_125604.png" alt="Logo">
         </div>
-        <div class="containerP">
-            <div class="noticiaP-right">
-                <h2 class="titulop">Mundo: conheça brasileiros que transformam vidas com a economia solidária</h2>
-                <p class="textop">Esperança, união e solidariedade: programa de sexta-feira (17) mostrou iniciativas que
+
+        <div id="div-navbar">
+            <nav id="navbar">
+                <a class="opcao-pagina" href="#">HOME</a>
+                <a class="opcao-pagina" href="#">NOTICIAS</a>
+                <a class="opcao-pagina" href="#">EVENTOS</a>
+                <a class="opcao-pagina" href="#">QUEM SOMOS</a>
+            </nav>
+            <div id="div-user-icon">
+                <img id="user-icon" src="https://icons.veryicon.com/png/o/miscellaneous/bitisland-world/person-18.png"
+                    alt="icone">
+            </div>
+        </div>
+    </header>
+
+    <!--PRIMEIRA PARTE-->
+    <div>
+        <div id="containerP">
+            <div id="noticiaP-right">
+                <h2 id="tituloP">Mundo: conheça brasileiros que transformam vidas com a economia solidária</h2>
+                <p id="textoP">Esperança, união e solidariedade: programa de sexta-feira (17) mostrou iniciativas que
                     funcionam como uma semente de esperança em tempos difíceis.</p>
             </div>
-            <div class="noticiaP-left">
-                <div class="box1">
-                    <h3>Contamos com sua ajuda</h3>
+            <div id="noticiaP-left">
+                <div class="box" id="box1">
+                    <h3 class="subTitulo">Contamos com sua ajuda</h3>
                 </div>
-                <div class="box2">
-                    <h3>Doação de sangue salva vidas</h3>
+                <div class="box" id="box2">
+                    <h3 class="subTitulo">Doação de sangue salva vidas</h3>
                 </div>
             </div>
         </div>
 
-        <section id="container2">
-            <div id="leftnoticias">
-                <div id="noticias0">
-                    <div id="outrosbox"></div>
-                    <div id="texto">
-                        <h3>Título Impactante</h3>
-                        <p>Pequeno texto</p>
-                    </div>
-                </div>
-                <div id="noticias0">
-                    <div id="outrosbox"></div>
-                    <div id="texto">
-                        <h3>Título Impactante</h3>
-                        <p>Pequeno texto</p>
-                    </div>
-                </div>
-                <div id="noticias0">
-                    <div id="outrosbox"></div>
-                    <div id="texto">
-                        <h3>Título Impactante</h3>
-                        <p>Pequeno texto</p>
-                    </div>
-                </div>
+        <!----------SEGUNDA PARTE---------------------------------->
 
+        <section id="container2">
+            <div id="leftNoticias">
+                <article class="noticias">
+                    <div class="outrosBox" id="imagem1"></div>
+                    <div id="texto">
+                        <h3 id="tituloOutros">Iniciativa Social Promove Inclusão Econômica de Mulheres em
+                            Vulnerabilidade</h3>
+                        <p id="outrasN"> ONG Mulheres em Ação anunciou a abertura de 200 novas vagas em cursos de
+                            capacitação para
+                            mulheres em situação de vulnerabilidade em São Paulo.</p>
+                    </div>
+                </article>
+                <article class="noticias">
+                    <div class="outrosBox" id="imagem2"></div>
+                    <div id="texto">
+                        <h3 id="tituloOutros">Projeto Inovador Restaura Ecossistemas Costeiros Ameaçados no Nordeste
+                        </h3>
+                        <p id="outrasN">Uma nova iniciativa da ONG Verde para Todos foi lançada esta semana, com o
+                            objetivo de
+                            recuperar manguezais degradados na costa nordestina do Brasil.</p>
+                    </div>
+                </article>
+                <article class="noticias">
+                    <div class="outrosBox" id="imagem3"></div>
+                    <div id="texto">
+                        <h3 id="tituloOutros"> Campanha Humanitária Arrecada Fundos para Combater a Fome em Áreas
+                            Afetadas pela Crise
+                            Climática</h3>
+                        <p id="outrasN"> ONG internacional Aliança Global Contra a Fome lançou uma campanha de
+                            emergência para
+                            arrecadar fundos destinados a apoiar comunidades em países africanos severamente afetados
+                            pela crise climática.</p>
+                    </div>
+                </article>
+                <article class="noticias">
+                    <div class="outrosBox" id="imagem4"></div>
+                    <div id="texto">
+                        <h3 id="tituloOutros">O Impacto das ONGs na Sociedade Moderna</h3>
+                        <p id="outrasN">As Organizações Não Governamentais (ONGs) desempenham um papel crucial na
+                            sociedade contemporânea. Elas atuam em diversas áreas, como direitos humanos, meio ambiente,
+                            saúde, educação e desenvolvimento comunitário. </p>
+                    </div>
+                </article>
             </div>
 
-            <div id="topnot">
-                <h2 ID="titulotop">Top Noticias</h2>
-                <div id="top1">
-                    <h3>TOP Título Impactante</h3>
-                    <p>Pequeno texto</p>
-                </div>
-                <divid id="outrostop">
-                    <h3>TOP Título Impactante</h3>
-                    <p>Pequeno texto</p>
-                </divid>
-                <divid id="outrostop">
-                    <h3>TOP Título Impactante</h3>
-                    <p>Pequeno texto</p>
-                </divid>
-                <divid id="outrostop">
-                    <h3>TOP Título Impactante</h3>
-                    <p>Pequeno texto</p>
-                </divid>
+            <aside id="topAssuntos">
+                <h2 id="titulotoP">Top Noticias</h2>
+                <nav id="top">
+                    <a class="top1" href="#">
+                        <h3> Organização Ambiental Fomenta Energias Renováveis em Regiões Carentes </h3>
+                        <p>A ONG Energia Sustentável para Todos está implementando um projeto que visa levar energias
+                            renováveis, como a solar e a eólica, a comunidades rurais de baixa renda no interior do
+                            Brasil.</p>
+                    </a>
+
+                    <a class="top1" href="#">
+                        <h3>Iniciativa Ambiental: ONG Mobiliza Comunidades para Limpeza de Rios e Praias</h3>
+                        <p>Com a campanha Águas Limpas, a ONG Verde Vivo organizou mutirões de voluntários em diversas
+                            cidades para a retirada de lixo das margens de rios e praias. </p>
+                    </a>
+
+                    <a class="top1" href="#">
+                        <h3>ONG Lança Programa de Apoio Psicológico para Jovens em Situação de Vulnerabilidade</h3>
+                        <p>A ONG Caminhos para o Futuro lançou um projeto voltado para o suporte emocional de jovens em
+                            situação de vulnerabilidade.</p>
+                    </a>
+                </nav>
+            </aside>
+        </section>
+    </div>
+
+    <footer>
+        <section id="footer-sec">
+            <div id="footer-menu">
+                <h3>Projeto ONGs</h3>
+                <a href="#">Home</a>
+                <a href="#">Noticias</a>
+                <a href="#">Eventos</a>
+                <a href="#">Voluntariados - Informações</a>
+                <a href="#">FAQ</a>
+                <a href="#">Trabalhe Conosco</a>
+                <a href="#">Termos do Site e Politica de privacidade</a>
+                <section id="footer-redes">
+                    <img src="../img/ig-icon.png" alt="instagram">
+                    <img src="../img/face-icon.png" alt="facebook">
+                    <img src="../img/x-icon.png" alt="twiter">
+                    <img style="background-color: white; border-radius: 100%;" src="../img/lkd-icon.png" alt="Lin">
+                    <img src="../img/github-icon.png" alt="github">
+                </section>
+            </div>
+            <div id="footer-infos">
+                <h3>Causas</h3>
+                <a href="#">Arte, cultura e esporte</a>
+                <a href="#">Cidadania</a>
+                <a href="#">Combate a fome</a>
+                <a href="#">Combate a pobreza</a>
+                <a href="#">Consumo consciente</a>
+                <a href="#">Crianças e adolescentes</a>
+                <a href="#">Causa Animal</a>
             </div>
         </section>
-    </main>
+        <div id="footer-contato">
+            <input placeholder="Nome..." type="text">
+            <input placeholder="Sobrenome..." type="text">
+            <input placeholder="Seu e-mail..." type="email">
+            <textarea placeholder="Escreva sua mensagem..." name="Nome" id=""></textarea>
+            <button>enviar</button>
+        </div>
+    </footer>
     <!-- <script src="./script.js"></script>-->
 </body>
 
