@@ -32,7 +32,6 @@ span {
     flex-direction: column;
 }
 
-
 #tituloP {
     margin-top: 10%;
     margin-left: 5%;
@@ -242,7 +241,7 @@ p {
     #leftnoticias {
         width: 100%;
     }
-
+  
     #topAssuntos {
         width: 100%;
     }
