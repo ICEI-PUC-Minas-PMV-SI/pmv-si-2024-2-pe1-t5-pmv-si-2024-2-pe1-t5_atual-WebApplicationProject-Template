@@ -12,12 +12,12 @@ Diante desse contexto, o presente trabalho propõe o desenvolvimento de uma plat
 
 ## Integrantes
 
-- Ester Messias
-- Ana Carolina Nunes
-- Lívia de Sousa
-- Kesley Pereira
-- Samuel Santos
-- Gabriel Vitor Borges
+* Ester Messias
+* Ana Carolina Nunes
+* Lívia de Sousa
+* Kesley Pereira
+* Samuel Santos
+* Gabriel Vitor Borges
 
 ## Orientador
 
