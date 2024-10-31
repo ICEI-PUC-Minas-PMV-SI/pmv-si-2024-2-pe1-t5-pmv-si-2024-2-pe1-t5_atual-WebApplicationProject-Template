@@ -3,6 +3,7 @@
 Inclua todas as referências (livros, artigos, sites, etc) utilizadas no desenvolvimento do trabalho.
 
 > **Links Úteis**:
+>
 > - [Formato ABNT](https://www.normastecnicas.com/referencias/)
 
 Exemplos de referências bibliográficas:
@@ -16,4 +17,3 @@ Exemplos de referências bibliográficas:
 **[4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
 
 **[5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
-
