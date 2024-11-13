@@ -1,144 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página de Listagem</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="listagem-ongs.css" />
-  <link rel="stylesheet" href="../gerais/geral.css" />
-</head>
-
-<body>
-  <header>
-    <div id="div-logotipo">
-      <img id="logotipo" src="../img/logo-2.png" alt="">
-      <input type="text" placeholder="pesquisar por...">
-    </div>
-
-    <div id="div-navbar">
-      <nav id="navbar">
-        <a class="opcao-pagina" href="../../index.html">HOME</a>
-        <a class="opcao-pagina" href="../listagem-ongs/listagem-ongs.html">ONGS</a>
-        <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
-        <a class="opcao-pagina" href="../eventos2/index.html">EVENTOS</a>
-        <a class="opcao-pagina" href="">QUEM SOMOS</a>
-      </nav>
-
-      <div class="dropdown">
-        <button id="div-user-icon">
-          <img id="user-icon" src="../img/avatar-padrao.png" alt="">
-        </button>
-        <div class="dropdown-content">
-          <a href="../user-ong/user-ong.html">Meu Perfil</a>
-          <!-- onclick="meuPerfil()" -->
-          <a href="#">Configurações</a>
-          <a onclick="sairPerfil()" href="#">Sair</a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Listagem</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="listagem-ongs.css" />
+    <link rel="stylesheet" href="../gerais/geral.css" />
+  </head>
+  <body>
+    <header>
+      <div id="div-logotipo">
+        <img
+          id="logotipo"
+          src="https://cdn.icon-icons.com/icons2/2070/PNG/512/toucan_icon_125604.png"
+          alt=""
+        />
       </div>
-      <div class="dropdown">
-        <button id="div-user-icon">
-          <img id="menu-icon" src="../img/menu.png" alt="">
-        </button>
-        <div class="dropdown-content">
-          <a class="opcao-pagina" href="../../index.html">HOME</a>
-          <a class="opcao-pagina" href="../src/Noticia/noticia.html">NOTICIAS</a>
-          <a class="opcao-pagina" href="../src/eventos2/index.html">EVENTOS</a>
+
+      <div id="div-navbar">
+        <nav id="navbar">
+          <a class="opcao-pagina" href="">HOME</a>
+          <a class="opcao-pagina" href="">NOTICIAS</a>
+          <a class="opcao-pagina" href="">EVENTOS</a>
           <a class="opcao-pagina" href="">QUEM SOMOS</a>
-          <a class="opcao-pagina" href="../src/user-ong/user-ong.html">MEU PERFIL</a>
-          <!-- onclick="meuPerfil()" -->
-          <a class="opcao-pagina" onclick="sairPerfil()" href="#">SAIR</a>
+        </nav>
+
+        <div id="div-user-icon">
+          <img
+            id="user-icon"
+            src="https://icons.veryicon.com/png/o/miscellaneous/bitisland-world/person-18.png"
+            alt=""
+          />
         </div>
       </div>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <div class="menu-icon">&#9776; Filtros Rápidos</div>
+        <div class="checkboxes">
+          <label><input type="checkbox" checked /> Animais</label>
+          <label><input type="checkbox" checked /> Projetos Nacionais</label>
+          <label><input type="checkbox" checked /> Projetos Mundial</label>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div class="search-bar">
+          <input type="text" placeholder="Busca" />
+        </div>
+
+        <div class="results">
+          <div class="result-item">
+            <div class="image-placeholder">
+              <img src="../img/ong-patas-unidas.png" alt="Patas Unidas" />
+            </div>
+            <p class="title">Patas Unidas</p>
+            <p class="description">
+              Uma ONG que atua na proteção e bem-estar dos animais, promovendo
+              resgates, adoção responsável e campanhas de conscientização. Seu
+              foco é garantir um tratamento digno aos animais e educar a
+              sociedade sobre a importância de protegê-los.
+            </p>
+            <button class="btn">Saber Mais</button>
+          </div>
+          <div class="result-item">
+            <div class="image-placeholder">
+              <img
+                src="../img/ong-cultivando-a-vida.png"
+                alt="Cultivando a Vida"
+              />
+            </div>
+            <p class="title">Cultivando a Vida</p>
+            <p class="description">
+              Focada na preservação ambiental e na promoção da sustentabilidade.
+              A organização trabalha para conscientizar a sociedade sobre a
+              importância de proteger os recursos naturais, incentivando
+              práticas ecológicas, reflorestamento e educação ambiental.
+            </p>
+            <button class="btn">Saber Mais</button>
+          </div>
+        </div>
+      </main>
     </div>
 
-  </header>
-
-  <div class="container">
-    <aside class="sidebar">
-      <div class="menu-icon">&#9776; Filtros Rápidos</div>
-      <div class="checkboxes">
-        <label><input type="checkbox" checked /> Animais</label>
-        <label><input type="checkbox" checked /> Projetos Nacionais</label>
-        <label><input type="checkbox" checked /> Projetos Mundial</label>
-      </div>
-    </aside>
-
-    <main class="main-content">
-      <div class="search-bar">
-        <input type="text" placeholder="Busca" />
-      </div>
-
-      <div class="results">
-        <div class="result-item">
-          <div class="image-placeholder">
-            <img src="../img/ong-patas-unidas.png" alt="Patas Unidas" />
-          </div>
-          <p class="title">Patas Unidas</p>
-          <p class="description">
-            Uma ONG que atua na proteção e bem-estar dos animais, promovendo
-            resgates, adoção responsável e campanhas de conscientização. Seu
-            foco é garantir um tratamento digno aos animais e educar a
-            sociedade sobre a importância de protegê-los.
-          </p>
-          <button class="btn">Saber Mais</button>
+    <footer>
+      <section id="footer-sec">
+        <div id="footer-menu">
+          <h3>Projeto ONGs</h3>
+          <a href="">Home</a>
+          <a href="">Noticias</a>
+          <a href="">Eventos</a>
+          <a href="">Voluntariados - Informações</a>
+          <a href="">FAQ</a>
+          <a href="">Trabalhe Conosco</a>
+          <a href="">Termos do Site e Politica de privacidade</a>
+          <section id="footer-redes">
+            <img src="../img/ig-icon.png" alt="ig" />
+            <img src="../img/face-icon.png" alt="fc" />
+            <img src="../img/x-icon.png" alt="tt" />
+            <img
+              style="background-color: white; border-radius: 100%"
+              src="../img/lkd-icon.png"
+              alt="lkin"
+            />
+            <img src="../img/github-icon.png" alt="github" />
+          </section>
         </div>
-        <div class="result-item">
-          <div class="image-placeholder">
-            <img src="../img/ong-cultivando-a-vida.png" alt="Cultivando a Vida" />
-          </div>
-          <p class="title">Cultivando a Vida</p>
-          <p class="description">
-            Focada na preservação ambiental e na promoção da sustentabilidade.
-            A organização trabalha para conscientizar a sociedade sobre a
-            importância de proteger os recursos naturais, incentivando
-            práticas ecológicas, reflorestamento e educação ambiental.
-          </p>
-          <button class="btn">Saber Mais</button>
+        <div id="footer-infos">
+          <h3>Causas</h3>
+          <a href="">Arte, cultura e esporte</a>
+          <a href="">Cidadania</a>
+          <a href="">Combate a fome</a>
+          <a href="">Combate a pobreza</a>
+          <a href="">Consumo consciente</a>
+          <a href="">Crianças e adolescentes</a>
+          <a href="">Causa Animal</a>
         </div>
+      </section>
+      <div id="footer-contato">
+        <input placeholder="Nome..." type="text" />
+        <input placeholder="Sobrenome..." type="text" />
+        <input placeholder="Seu e-mail..." type="email" />
+        <textarea
+          placeholder="Escreva sua mensagem..."
+          name=""
+          id=""
+        ></textarea>
+        <button>enviar</button>
       </div>
-    </main>
-  </div>
-
-  <footer>
-    <section id="footer-sec">
-      <div id="footer-menu">
-        <h3>Projeto ONGs</h3>
-        <a href="#">Home</a>
-        <a href="./src/Noticia/noticia.html">Noticias</a>
-        <a href="./src/eventos2/index.html">Eventos</a>
-        <a href="">Voluntariados - Informações</a>
-        <a href="">FAQ</a>
-        <a href="">Trabalhe Conosco</a>
-        <a href="">Termos do Site e Politica de privacidade</a>
-        <section id="footer-redes">
-          <img src="../img/insta-b.png" alt="ig">
-          <img src="../img/face-b.png" alt="fc">
-          <img src="../img/lkn-b.png" alt="lkin">
-          <img src="../img/wpp-b.png" alt="whatsapp">
-        </section>
-      </div>
-      <div id="footer-infos">
-        <h3>Causas</h3>
-        <a href="">Arte, cultura e esporte</a>
-        <a href="">Cidadania</a>
-        <a href="">Combate a fome</a>
-        <a href="">Combate a pobreza</a>
-        <a href="">Consumo consciente</a>
-        <a href="">Crianças e adolescentes</a>
-        <a href="">Causa Animal</a>
-      </div>
-    </section>
-    <form id="footer-contato">
-      <input id="nomeContato" required placeholder="*Nome..." type="text">
-      <input id="sobrenomeContato" placeholder="*Sobrenome..." type="text">
-      <input id="emailContato" placeholder="*Seu e-mail..." type="email">
-      <textarea id="msgContato" placeholder="*Escreva sua mensagem..." name="" id=""></textarea>
-      <button onclick="enviaInfosContato()" type="button">enviar</button>
-    </form>
-  </footer>
-</body>
-<script src="listagem-ongs.js"></script>
-
+    </footer>
+  </body>
+  <script src="listagem-ongs.js"></script>
 </html>
