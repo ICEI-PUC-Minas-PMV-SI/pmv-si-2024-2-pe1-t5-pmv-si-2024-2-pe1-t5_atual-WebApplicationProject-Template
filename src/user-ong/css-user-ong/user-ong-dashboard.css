@@ -91,7 +91,11 @@ main {
   cursor: pointer;
 }
 
-
+#gerarPdf{
+  color: #2190FB;
+  background-color: transparent;
+  text-decoration: underline;
+}
 
 /*--------------------------------------------*/
 
