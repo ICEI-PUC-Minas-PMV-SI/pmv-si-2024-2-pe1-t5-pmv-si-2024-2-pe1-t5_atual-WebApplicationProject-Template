@@ -1,60 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de Listagem</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="listagem-ongs.css" />
-    <link rel="stylesheet" href="../gerais/geral.css" />
-  </head>
-  <body>
-    <header>
-      <div id="div-logotipo">
-        <img id="logotipo" src="../img/logo-2.png" alt="" />
-        <input type="text" placeholder="pesquisar por..." />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Listagem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="listagem-ongs.css" />
+  <link rel="stylesheet" href="../gerais/geral.css" />
+</head>
 
-      <div id="div-navbar">
-        <nav id="navbar">
-          <a class="opcao-pagina" href="../../index.html">HOME</a>
-          <a class="opcao-pagina" href="../listagem-ongs/listagem-ongs.html"
-            >ONGS</a
-          >
-          <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
-          <a class="opcao-pagina" href="../eventos2/index.html">EVENTOS</a>
-          <a class="opcao-pagina" href="">QUEM SOMOS</a>
-        </nav>
-        <div class="dropdown">
-          <button id="div-user-icon">
-            <img id="user-icon" src="../img/avatar-padrao.png" alt="" />
-          </button>
-          <div class="dropdown-content">
-            <a onclick="meuPerfil()" href="">Meu Perfil</a>
-            <a href="../user-doador/user-doador.html">Pag. User Doador</a>
-            <a href="#">Configurações</a>
-            <a onclick="sairPerfil()" href="#">Sair</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button id="div-user-icon">
-            <img id="menu-icon" src="../img/menu.png" alt="" />
-          </button>
-          <div class="dropdown-content">
-            <a class="opcao-pagina" href="#">HOME</a>
-            <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
-            <a class="opcao-pagina" href="">EVENTOS</a>
-            <a class="opcao-pagina" href="">QUEM SOMOS</a>
-            <a class="opcao-pagina" onclick="meuPerfil()" href="">MEU PERFIL</a>
-            <a class="opcao-pagina" onclick="sairPerfil()" href="#">SAIR</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
+<body>
+  <script src="../../header.js"></script>
+  <div id="header-placeholder"></div>
     <div class="container">
       <aside class="sidebar">
         <div class="menu-icon">&#9776; Filtros Rápidos</div>
@@ -101,9 +58,9 @@
             <button class="btn">Saber Mais</button>
           </div>
         </div>
-      </main>
-    </div>
-
+      </div>
+    </main>
+  </div>
     <footer>
       <section id="footer-sec">
         <div id="footer-menu">
