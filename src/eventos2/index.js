@@ -16,9 +16,9 @@ function enviarFormulario() {
   const email = document.getElementById('email').value;
 
   if (nome && telefone && email) {
-      alert(Formulário enviado! Um dos nossos voluntários entrará em contato em breve!);
-      fecharPopup(); 
-}
+    alert('Formulário enviado!\n' + 'Nome: ' + nome + '\nTelefone: ' + telefone + '\nE-mail: ' + email);
+    fecharPopup(); 
+} 
 // botao informações
 function mostrarMensagem() {
   const mensagem = document.createElement('div');
