@@ -18,6 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <meta charset="UTF-8">
+    <script src="index.js"></script>
 
 </head>
 
@@ -72,32 +73,39 @@
                     <a href="tel:+553134083000" class="botao-ligacao"><img src="telefone.png" alt "Icones" width="20"
                             height="20" ;> CONTATO</a>
                 </div>
-                <!--VER ESPAÇO-->
-                <button id="openPopup" class="botao-ligacao"><img src="icon.png" alt="Icones" width="20" height="20">
-                    VOLUNTÁRIOS </button>
-                <div class="overlay" id="overlay"></div>
-                <div class="popup" id="popup">
-                    <p>Tem interesse em se voluntariar? Preencha o formulário abaixo e um dos responsáveis entrará em
-                        contato com você! </p>
-                    <form id="myForm">
-                        <div class="center">
-                            <input type="text" id="inputText" placeholder="NOME COMPLETO" required>
-                            <br>
-                            <input type="text" id="inputText" placeholder="TELEFONE" required>
-                            <br>
-                        </div>
-                    </form>
 
-                    <p></p>
-                    <div class="center">
-                        <buton id="closePopup">ENVIAR</buton>
+                <button id="botao" onclick="abrirPopup()" class="botao-ligacao"><img src="icon.png" alt="Icones"
+                        width="20" height="20">VOLUNTÁRIOS</button>
+
+
+                <div id="popup-overlay" onclick="fecharPopup()"></div>
+
+
+                <div id="popup">
+                    <p><h4>Quer se voluntariar? Preencha o formulário abaixo e entraremos em contato!</h4></p>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
                     </div>
-
+                    <div class="form-group">
+                        <label for="telefone">Telefone para contato:</label>
+                        <input type="text" id="telefone" placeholder="Digite seu telefone">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Seu melhor e-mail:</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail">
+                    </div>
+                    <button onclick="enviarFormulario()">ENVIAR</button>
+                    <button onclick="fecharPopup()">FECHAR</button>
                 </div>
-                
+
+
             </div>
 
+
         </div>
+
+    </div>
 
 
     </div>
@@ -106,11 +114,11 @@
     <div>
         <!--iINFORMAÇÃO,LOCALIZAÇÃO E DATA-->
         <div class="info">
-           
+
             <button onclick="mostrarMensagem()" class="botao-ligacao">INFORMAÇÕES</button>
         </div>
         <div class="info">
-            <button onclick="mostrarMensagem()" class="botao-ligacao">LOCALIZAÇÃO</button>
+            <button onclick="mostrarlocal()" class="botao-ligacao">LOCALIZAÇÃO</button>
         </div>
 
         <div class="info">
@@ -275,13 +283,13 @@
                             </div>
                         </form>
 
-                       <p></p>
+                        <p></p>
                         <div class="center">
                             <buton id="closePopup">ENVIAR</buton>
                         </div>
 
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -293,10 +301,10 @@
         <div>
             <!--iINFORMAÇÃO,LOCALIZAÇÃO E DATA-->
             <div class="info" justify-content: left;>
-                <button onclick="mostrarMensagem()" class="botao-ligacao">INFORMAÇÕES</button>
+                <button onclick="mostrarMensagem2()" class="botao-ligacao">INFORMAÇÕES</button>
             </div>
             <div class="info">
-                <button onclick="mostrarMensagem()" class="botao-ligacao">LOCALIZAÇÃO</button>
+                <button onclick="mostrarlocal2()" class="botao-ligacao">LOCALIZAÇÃO</button>
             </div>
 
             <div class="info">
@@ -351,16 +359,17 @@
     </div>
 
     <div class="center">
-        <div class="conteudo" id="conteudo">
-            <p>Sem novos eventos no momento!</p>
+
+        <button id="botao" class="botao-ligacao" onclick="exibirMensagem()">VER MAIS</button>
+        <p></p>
+        <p></p>
+        <div id="mensagem" class="conteudo">
+            Sem mais eventos no momento!
         </div>
 
-        <span class="botao" id="botao">VER MAIS</span>
-
-  
     </div>
 
-    <!-- ERROS- segunda página não abre componentes, formulário e o primeiro está mudando para tudo. -->
+
     <footer>
         <section id="footer-sec">
             <div id="footer-menu">

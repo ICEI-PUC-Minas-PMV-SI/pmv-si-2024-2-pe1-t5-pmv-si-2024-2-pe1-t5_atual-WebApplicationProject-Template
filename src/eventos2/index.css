@@ -10,8 +10,8 @@ body {
 }
 .center {
   font-size: 16px;
-  text-align: center;
   margin-right: 7px;
+  text-align: center;
 }
 .size {
   display: flex;
@@ -93,7 +93,7 @@ body {
   margin-bottom: 10px;
 }
 .conteudo {
-  display: none; /* Oculta o conteúdo inicialmente */
+  display: none;
 }
 .botao {
   padding: 15px;
@@ -107,4 +107,57 @@ body {
   margin-right: 7px;
   justify-content: center; 
   align-items: center;
+}
+#popup {
+  display: none; 
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  background-color: #d0d0d0de;
+  padding: 50px;
+  border: 3px solid #4eabf1;
+  box-shadow: 0 0 10px rgba(146, 146, 146, 0.1);
+  z-index: 1000;
+ 
+}
+
+#popup .form-group {
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#popup input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+}
+
+
+#popup button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#popup button:hover {
+  background-color: #0056b3;
+}
+
+
+#popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
