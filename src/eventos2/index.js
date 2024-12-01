@@ -3,12 +3,10 @@ function abrirPopup() {
   document.getElementById('popup-overlay').style.display = 'block';
 }
 
-
 function fecharPopup() {
   document.getElementById('popup').style.display = 'none';
   document.getElementById('popup-overlay').style.display = 'none';
 }
-
 
 function enviarFormulario() {
   const nome = document.getElementById('nome').value;
@@ -16,9 +14,18 @@ function enviarFormulario() {
   const email = document.getElementById('email').value;
 
   if (nome && telefone && email) {
-    alert('Formulário enviado!\n' + 'Nome: ' + nome + '\nTelefone: ' + telefone + '\nE-mail: ' + email);
-    fecharPopup(); 
-} 
+    alert(
+      'Formulário enviado!\n' +
+        'Nome: ' +
+        nome +
+        '\nTelefone: ' +
+        telefone +
+        '\nE-mail: ' +
+        email,
+    );
+    fecharPopup();
+  }
+}
 // botao informações
 function mostrarMensagem() {
   const mensagem = document.createElement('div');
