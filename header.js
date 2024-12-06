@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Inicializar eventos e comportamentos da header
 function initializeHeader() {
-    // Improved error handling and validation
     const elements = {
         modalLogin: document.getElementById('loginModal'),
         modalCadastro: document.getElementById('signupModal'),
@@ -33,12 +32,10 @@ function initializeHeader() {
         mensagemDivCadastro: document.getElementById("mensagem-signup")
     };
 
-    // Enhanced modal handling with more accessibility
     function abrirModal(modal) {
         if (!modal) return;
         modal.style.display = 'block';
         modal.setAttribute('aria-hidden', 'false');
-        // Focus first input in the modal for better accessibility
         const firstInput = modal.querySelector('input');
         if (firstInput) firstInput.focus();
     }
@@ -49,7 +46,6 @@ function initializeHeader() {
         modal.setAttribute('aria-hidden', 'true');
     }
 
-    // Attach close event listeners
     if (elements.btnFecharLogin) {
         elements.btnFecharLogin.addEventListener('click', (e) => {
             e.preventDefault();
@@ -64,7 +60,6 @@ function initializeHeader() {
         });
     }
 
-    // Enhanced message display with improved UX
     function exibirMensagem(mensagem, tipo, mensagemDiv) {
         if (!mensagemDiv) return;
         
@@ -73,20 +68,17 @@ function initializeHeader() {
         mensagemDiv.classList.add(tipo === "sucesso" ? "sucesso" : "erro");
         mensagemDiv.classList.remove("hidden");
         
-        // Use a more robust timeout method
         const timeoutId = setTimeout(() => {
             mensagemDiv.classList.add("hidden");
             clearTimeout(timeoutId);
         }, 5000);
     }
 
-    // Improved email validation
     function validarEmail(email) {
         const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return regex.test(String(email).toLowerCase());
     }
 
-    // Enhanced password strength checker
     function verificarForcaSenha(senha) {
         const forcaDiv = document.getElementById('password-strength-text');
         const forcaBar = document.getElementById('password-strength-bar');
@@ -127,7 +119,6 @@ function initializeHeader() {
         }
     }
 
-    // Generalized error handling
     function limparErros(campos, spansErro) {
         campos.forEach((campo) => {
             if (campo) campo.classList.remove("invalid");
@@ -148,7 +139,6 @@ function initializeHeader() {
         }
     }
 
-    // Add event listeners to prevent default login for all links
     document.querySelectorAll('a[href="#"]:not(#logout)').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -156,13 +146,11 @@ function initializeHeader() {
         });
     });
 
-    // Close modals when clicking outside
     window.addEventListener('click', function (e) {
         if (e.target === elements.modalLogin) fecharModal(elements.modalLogin);
         if (e.target === elements.modalCadastro) fecharModal(elements.modalCadastro);
     });
 
-    // Modal switching events
     const switchToSignup = document.getElementById('switchToSignup');
     const switchToLogin = document.getElementById('switchToLogin');
 
@@ -182,14 +170,12 @@ function initializeHeader() {
         });
     }
 
-    // Password visibility toggle
     window.alternarVisibilidadeSenha = function (inputId) {
         const inputSenha = document.getElementById(inputId);
         const tipo = inputSenha.type === 'password' ? 'text' : 'password';
         inputSenha.type = tipo;
     };
 
-    // Login form submission
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', function (e) {
@@ -236,7 +222,6 @@ function initializeHeader() {
         });
     }
 
-    // Signup form submission
     const signupForm = document.getElementById('signupForm');
     if (signupForm) {
         signupForm.addEventListener('submit', function (e) {
@@ -280,7 +265,6 @@ function initializeHeader() {
                 valido = false;
             }
 
-            // Add password strength check
             verificarForcaSenha(novaSenha.value);
 
             if (!tipoUsuario.value.trim()) {
@@ -303,7 +287,6 @@ function initializeHeader() {
             fecharModal(elements.modalCadastro);
         });
 
-        // Add password strength check on input
         const novaSenha = document.getElementById("newPassword");
         if (novaSenha) {
             novaSenha.addEventListener('input', function() {
