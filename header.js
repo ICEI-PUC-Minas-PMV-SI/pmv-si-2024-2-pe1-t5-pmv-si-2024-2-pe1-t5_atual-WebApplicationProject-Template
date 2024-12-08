@@ -176,6 +176,12 @@ function initializeHeader() {
         inputSenha.type = tipo;
     };
 
+    function redirectToIndex() {
+        window.location.href = "/index.html";
+    }
+    
+    
+
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', function (e) {
@@ -219,6 +225,7 @@ function initializeHeader() {
 
             exibirMensagem(`Bem-vindo, ${dadosUsuario.username}!`, "sucesso", elements.mensagemDivLogin);
             fecharModal(elements.modalLogin);
+            redirectToIndex();
         });
     }
 
@@ -285,6 +292,7 @@ function initializeHeader() {
 
             exibirMensagem("Cadastro realizado com sucesso!", "sucesso", elements.mensagemDivCadastro);
             fecharModal(elements.modalCadastro);
+            redirectToIndex();
         });
 
         const novaSenha = document.getElementById("newPassword");
