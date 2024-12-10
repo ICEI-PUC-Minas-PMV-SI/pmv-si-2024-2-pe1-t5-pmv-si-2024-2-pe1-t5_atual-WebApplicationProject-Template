@@ -5,76 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil</title>
-  <link rel="stylesheet" href="./css-user-ong/user-ong.css">
   <link rel="stylesheet" href="../gerais/geral.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-dashboard.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-registros.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-projetos.css">
+  <link rel="stylesheet" href="./css-user-ong/user-ong-relatorios.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 
 <body>
   <script src="../gerais/geral.js"></script>
   <script src="./user-ong.js"></script>
-  <header>
-    <div id="div-logotipo">
-      <img id="logotipo" src="../img/logo-2.png" alt="">
-      <input type="text" placeholder="pesquisar por...">
-    </div>
+  <script src="../../header.js"></script>
 
-    <div id="div-navbar">
-      <nav id="navbar">
-        <a class="opcao-pagina" href="#">HOME</a>
-        <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
-        <a class="opcao-pagina" href="">EVENTOS</a>
-        <a class="opcao-pagina" href="">QUEM SOMOS</a>
-      </nav>
-
-      <div class="dropdown">
-        <button id="div-user-icon">
-          <img id="user-icon" src="../img/avatar-padrao.png" alt="">
-        </button>
-        <div class="dropdown-content">
-          <a onclick="meuPerfil()" href="">Meu Perfil</a>
-          <a href="#">Configurações</a>
-          <a onclick="sairPerfil()" href="#">Sair</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button id="div-user-icon">
-          <img id="menu-icon" src="../img/menu.png" alt="">
-        </button>
-        <div class="dropdown-content">
-          <a class="opcao-pagina" href="#">HOME</a>
-          <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
-          <a class="opcao-pagina" href="">EVENTOS</a>
-          <a class="opcao-pagina" href="">QUEM SOMOS</a>
-          <a class="opcao-pagina" onclick="meuPerfil()" href="">MEU PERFIL</a>
-          <a class="opcao-pagina" onclick="sairPerfil()" href="#">SAIR</a>
-        </div>
-      </div>
-    </div>
-
-  </header>
+  <div id="header-placeholder"></div>
 
   <main>
     <section id="dashboard">
       <section id="perfil-dash">
-        <img src="../img/image-icon.png" alt="">
-        <h1 id="nome-ong">Cidadania Animal</h1>
+        <img src="../img/logo-cidadania-animal.png" alt="">
+        <h1 class="editavel" contenteditable="false" id="nome-ong">Cidadania Animal</h1>
         <div id="tags-ong">
           <p id="tag-primaria">Animais</p>
           <p id="tag-secundaria">Grande Porte</p>
         </div>
-        <p id="bio-ong">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco...</p>
+        <p class="editavel" contenteditable="false" id="bio-ong">A ONG SOS Cidadania Animal de São Caetano do Sul tem como principal objetivo a realização de eventos para adoção de cães e gatos, resgates na medida do possível (não temos abrigo), incentivar a castração e a vacinação, lutar por vida digna dentro do CCZ Municipal, gritar em nome dos animais pelo fim das crueldades e...</p>
         <a id="ver-mais-bio" href="">ver mais</a>
         <div id="infos-ong">
-          <p id="endereco-ong">Rua Espirito Santo - 746</p>
-          <p id="cidade-ong">São Caetano do Sul - SP</p>
-          <p id="tel-ong">+55 (11) 2759-2010</p>
-          <p id="email-ong">ongsoscidadaniaanimal@gmail.com</p>
+          <p class="editavel" contenteditable="false" id="endereco-ong">Rua Espirito Santo - 746</p>
+          <p class="editavel" contenteditable="false" id="cidade-ong">São Caetano do Sul - SP</p>
+          <p class="editavel" contenteditable="false" id="tel-ong">+55 (11) 2759-2010</p>
+          <p class="editavel" contenteditable="false" id="email-ong">ongsoscidadaniaanimal@gmail.com</p>
         </div>
-        <button id="btn-editar-perfil">editar</button>
-        <a id="ver-mais-bio" style="margin-top: 10px;" href="">Gerar relatório</a>
+        <button onclick="editarPerfil()" id="btn-editar-perfil">editar</button>
+        <button id="gerar-pdf" style="margin-top: 10px;" href="">Gerar relatório</button>
       </section>
       <section id="row-group">
         <div class="row-1-dash">
@@ -85,31 +51,35 @@
           </div>
           <div class="row-1-card-dash">
             <img style="width: 30px; margin-bottom: 14px;" src="../img/people-icon.png" alt="">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <p>Taxa de retenção de doadores</p>
+            <h3>62%</h3>
           </div>
           <div class="row-1-card-dash">
             <img style="width: 30px; margin-bottom: 14px;" src="../img/people-icon.png" alt="">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <p>Custo operacional</p>
+            <div style="display: flex; justify-content: space-between;">
+              <h3 id="value-display" contenteditable="false">R$ 8.500,00</h3>
+              <button class="edit-btn" onclick="toggleEdit()">Editar</button>
+            </div>
           </div>
         </div>
 
         <section class="row-2-dash">
           <div class="row-2-card-dash">
             <div class="card-row-2">
-              <img style="width: 162px; height: 124px;" src="../img/dash-idade.png" alt="">
-              <p style="padding-right: 15px;">Faixa Etária</p>
+              <canvas id="g_faixaEtaria" width="200" height="100"></canvas>
+              <p>Faixa Etária</p>
             </div>
             <div class="card-row-2">
-              <img style="width: 124px; height: 133px;" src="../img/dash-localidade.png" alt="">
-              <p style="padding-left: 15px;">Localidade</p>
+              <canvas id="g_localidade" width="200" height="100"></canvas>
+              <p>Localidade</p>
             </div>
             <div class="card-row-2">
-              <img style="width: 204px; height: 129px;" src="../img/dash-renda.png" alt="">
+              <canvas id="g_rendaMensal" width="200" height="100"></canvas>
               <p>Renda Mensal</p>
             </div>
           </div>
+          <button>Acessar Registros</button>
         </section>
 
         <section class="row-3-dash">
@@ -118,8 +88,16 @@
             <h3>32 doadores</h3>
           </div>
           <div class="row-3-card-dash">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <p>Canal de captação mais eficaz</p>
+            <h3>Instagram</h3>
+          </div>
+          <div class="row-3-card-dash">
+            <p>Número total de voluntários ativos</p>
+            <h3>12 voluntarios</h3>
+          </div>
+          <div class="row-3-card-dash">
+            <p>Avaliação média dos usuários</p>
+            <h3>4.7/5</h3>
           </div>
         </section>
 
@@ -128,40 +106,50 @@
 
     <section id="registros">
       <h2 id="reg-titulo">Registros</h2>
+
       <div id="reg-group-cards">
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-1.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">Antes e depois dos nossos AUmigos!</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-2.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">12° Feira Adote com Amor</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-3.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">5º Cuidado em Ação</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-4.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">Educação e Consciencia: Abandono</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-5.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">4º Cuidado em Ação</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
+
+        <div style="display: flex; gap: 30px;" id="novoCard"></div>
+
         <div id="reg-btn-div"><button onclick="abreReg()" id="reg-btn">+</button></div>
 
+        <div id="overlay"></div>
         <div id="modalRegistro" class="modalRegistro">
           <div class="m-main">
             <div class="m-reg-img">
               <img src="../img/img-padrao.png" alt="">
               <p>selecione a foto</p>
-              <input type="file">
+              <input accept="image/*" id="cardPhoto" type="file">
             </div>
 
             <div class="m-reg-left">
@@ -172,12 +160,12 @@
 
               <form class="m-form">
                 <label class="m-reg-label" for="m-reg-titulo">Titulo</label>
-                <input class="m-reg-input" placeholder="Digite..." type="text" id="m-reg-titulo" name="m-reg-titulo" required />
+                <input id="news-title" class="m-reg-input" placeholder="Digite..." type="text" id="m-reg-titulo" name="m-reg-titulo" required />
 
                 <label class="m-reg-label" for="m-reg-desc">Descrição</label>
-                <input class="m-reg-input" placeholder="Digite..." type="texto" id="m-reg-desc" name="m-reg-desc" required />
+                <textarea id="news-description" class="m-reg-input" placeholder="Digite..." type="texto" id="m-reg-desc" name="m-reg-desc" required></textarea>
 
-                <button type="button" class="m-reg-btn">Criar</button>
+                <button id="create-news-btn" type="button" class="m-reg-btn">Criar</button>
               </form>
             </div>
           </div>
@@ -190,63 +178,66 @@
         <h2 id="pj-titulo">Projetos</h2>
         <button onclick="abreProj()" id="pj-btn">+</button>
       </div>
-      <div id="pj-main">
+      <div id="pj-main" class="pj-main">
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-4.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem </p>
-            <a class="pj-ver-mais" href="">ver mais</a>
+            <h3 class="pj-card-h3">Adote com Amor</h3>
+            <p class="pj-card-paragrafo">Este projeto conecta animais resgatados a famílias amorosas, promovendo adoções responsáveis e seguras.</p>
+            <p class="pj-ver-mais" href="">Inscrições abertas até 15/12/24</p>
           </div>
           <div class="pj-card-lupa">
-            <img class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <img onclick="abreInscr()" class="pj-lupa" src="../img/caneta.png" alt="lupa">
           </div>
         </div>
 
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-5.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem lorem ipsum orem</p>
-            <a class="pj-ver-mais" href="">ver mais</a>
+            <h3 class="pj-card-h3">Cuidado em Ação</h3>
+            <p class="pj-card-paragrafo">Focado no resgate e tratamento de animais em situação de rua ou maus-tratos para reintegrá-los a um ambiente seguro.</p>
+            <a class="pj-ver-mais" href="">Inscrições abertas até 15/12/24</a>
           </div>
           <div class="pj-card-lupa">
-            <img class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <img onclick="abreInscr()" class="pj-lupa" src="../img/caneta.png" alt="lupa">
           </div>
         </div>
 
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-1.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem lorem ipsum orem sumip lorem lorem ipsum</p>
-            <a class="pj-ver-mais" href="">ver mais</a>
+            <h3 class="pj-card-h3">Educação e Consciencia</h3>
+            <p class="pj-card-paragrafo">Promovemos campanhas educativas sobre direitos dos animais, guarda responsável e combate ao abandono.</p>
+            <a class="pj-ver-mais" href="">Inscrições encerradas!</a>
           </div>
           <div class="pj-card-lupa">
-            <img class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <img onclick="abreInscr()" class="pj-lupa" src="../img/caneta.png" alt="lupa">
           </div>
         </div>
 
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-2.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
-            <a class="pj-ver-mais" href="">ver mais</a>
+            <h3 class="pj-card-h3">Rede de Apoio Voluntário</h3>
+            <p class="pj-card-paragrafo">Este projeto conecta pessoas que desejam ajudar animais a oportunidades de voluntariado para transformar vidas.</p>
+            <a class="pj-ver-mais" href="">Inscrições abertas até 03/01/25</a>
           </div>
           <div class="pj-card-lupa">
-            <img class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <img onclick="abreInscr()" id="newLupa" class="pj-lupa" src="../img/caneta.png" alt="lupa">
           </div>
         </div>
 
       </div>
 
-      <div id="modalProjetos" class="modalProjetos">
+      <div class="pj-main" id="novoCardProj"></div>
+
+      <div id="overlay-proj"></div>
+      <div id="modalProjetos" class="modalProjetos"> <!-- add novo projeto -->
         <div class="m-proj-main">
           <div class="m-proj-img">
             <img src="../img/img-padrao.png" alt="">
             <small>selecione a foto</small>
-            <input type="file">
+            <input accept="image/*" id="cardPhotoProj" type="file">
           </div>
 
           <div class="m-proj-left">
@@ -257,17 +248,68 @@
 
             <form class="m-proj-form">
               <label class="m-proj-label" for="m-proj-titulo">Titulo</label>
-              <input class="m-proj-input" placeholder="Digite..." type="text" id="m-proj-titulo" name="m-proj-titulo" required />
+              <input id="news-title-proj" class="m-proj-input" placeholder="Digite..." type="text" id="m-proj-titulo" name="m-proj-titulo" required />
 
               <label class="m-proj-label" for="m-proj-desc-g">Descrição</label>
-              <textarea placeholder="Digite..." name="m-proj-desc-g" class="m-proj-desc-g"></textarea>
+              <textarea id="news-description-proj" placeholder="Digite..." name="m-proj-desc-g" class="m-proj-desc-g"></textarea>
               <small>maximo 400 caracteres</small>
-              <button type="button" class="m-proj-btn">Criar</button>
+              <button id="create-proj" type="button" class="m-proj-btn">Criar</button>
             </form>
           </div>
         </div>
       </div>
 
+
+      <!--modal de inscrição-->
+      <div id="modalInscricao" class="modalInscricao">
+        <div class="m-p-insc-main">
+          <div class="m-p-insc-infos">
+            <h3 style="margin-bottom: 20px; color: #007bff;">Editar descrição do projeto</h3>
+            <h4>Junte-se aos nossos projetos e transforme vidas!</h4>
+            <br>
+            <textarea style="height: 300px; width: 100%; background-color: #eaeeef; padding: 10px; ">A Cidadania Animal desenvolve iniciativas que fazem a diferença na vida de milhares de animais e na construção de uma sociedade mais consciente e solidária. Nossos projetos abrangem adoção responsável, resgate e cuidados, educação sobre direitos dos animais e oportunidades de voluntariado. Cada ação é pensada para criar impacto positivo e oferecer a você a chance de contribuir de forma significativa. Escolha o projeto que mais combina com você e seja parte dessa rede de amor e cidadania. Juntos, podemos fazer mais pelos nossos amigos de quatro patas!</textarea>
+          </div>
+
+          <div class="m-insc-left">
+            <div class="m-proj-infos">
+              <span class="m-fechar">&times;</span>
+              <h3 style="margin-bottom: 20px; color: #007bff;">Solicitar alteração formulário de inscrição</h3>
+              <h3>Selecione as informações</h3>
+            </div>
+
+            <form class="m-insc-form">
+              <label class="m-proj-label" for="m-proj-titulo">Opção</label>
+              <select class="m-proj-input" placeholder="Digite..." name="m-proj-titulo" required>
+                <option value="v1" selected disabled>Escolha uma opção</option>
+                <option value="v1">Adicionar campo</option>
+                <option value="v2">Alterar campo</option>
+                <option value="v3">Relatar erro</option>
+              </select>
+
+              <label class="m-proj-label" for="">Descrição</label>
+              <textarea id="news-description-proj" placeholder="Digite..." name="m-proj-desc-g" class="m-proj-desc-g"></textarea>
+              <small>Ex: Informação antiga: Nome do campo "Nome completo"</small>
+              <small> Informação nova: Somente "Nome"</small>
+              <small> Ex 2: Adicionar campo "Idade"</small>
+
+              <button id="create-insc" type="submit" class="m-proj-btn">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section id="relatorios">
+      <h3>Relatório de Receitas</h3>
+      <ul>
+        <li><a href="">Relatório de receitas e gastos 2º Semestre 2024</a></li>
+        <li><a href="">Relatório de receitas e gastos 1º Semestre 2024</a></li>
+        <li><a href="">Relatório de receitas e gastos 2º Semestre 2023</a></li>
+        <li><a href="">Relatório de receitas e gastos 1º Semestre 2023</a></li>
+      </ul>
+      <button>Adicionar</button>
     </section>
   </main>
 
@@ -308,6 +350,146 @@
       <button onclick="enviaInfosContato()" type="button">enviar</button>
     </form>
   </footer>
+
+
+  <script>
+    const ctx_faixaEtaria = document.getElementById('g_faixaEtaria').getContext('2d');
+    const g_faixaEtaria = new Chart(ctx_faixaEtaria, {
+      type: 'doughnut',
+      data: {
+        labels: ['18 a 24 anos', '25 a 45 anos', '45 a 55 anos', '+ 55 anos'],
+        datasets: [{
+          label: 'Faixa Etaria',
+          data: [10, 40, 30, 20],
+          backgroundColor: [
+            'rgba(33, 144, 251, 1)',
+            'rgba(96, 46, 158, 1)',
+            'rgba(134, 209, 230, 1)',
+            'rgba(165, 145, 239, 1)'
+          ],
+          hoverBackgroundColor: [
+            'rgba(33, 144, 251, 0.5)',
+            'rgba(96, 46, 158, 0.5)',
+            'rgba(134, 209, 230, 0.5)',
+            'rgba(165, 145, 239, 0.5)'
+          ]
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              font: {
+                size: 7
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const ctx_localidade = document.getElementById('g_localidade').getContext('2d');
+    const g_localidade = new Chart(ctx_localidade, {
+      type: 'doughnut',
+      data: {
+        labels: ['Sudeste', 'Nordeste', 'Norte', 'Centro Oeste', 'Sul'],
+        datasets: [{
+          label: 'Localidade',
+          data: [37.5, 25.3, 20, 12.5, 6.2],
+          backgroundColor: [
+            'rgba(33, 144, 251, 1)',
+            'rgba(96, 46, 158, 1)',
+            'rgba(134, 209, 230, 1)',
+            'rgba(165, 145, 239, 1)',
+            'rgba(78, 171, 241, 1)'
+          ],
+          hoverBackgroundColor: [
+            'rgba(33, 144, 251, 0.5)',
+            'rgba(96, 46, 158, 0.5)',
+            'rgba(134, 209, 230, 0.5)',
+            'rgba(165, 145, 239, 0.5)',
+            'rgba(78, 171, 241, 0.5)'
+          ]
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              font: {
+                size: 7
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const ctx_rendaMensal = document.getElementById('g_rendaMensal').getContext('2d');
+    const g_rendaMensale = new Chart(ctx_rendaMensal, {
+      type: 'doughnut',
+      data: {
+        labels: ['R$2000 a R$4000', 'R$4001 a R$6000', 'R$6001 a R$8000', 'R$8001 a R$10000', '+ de R$10001'],
+        datasets: [{
+          label: 'Rensa Mensal',
+          data: [20, 27, 15, 10, 6.2],
+          backgroundColor: [
+            'rgba(33, 144, 251, 1)',
+            'rgba(96, 46, 158, 1)',
+            'rgba(134, 209, 230, 1)',
+            'rgba(165, 145, 239, 1)',
+            'rgba(78, 171, 241, 1)'
+          ],
+          hoverBackgroundColor: [
+            'rgba(33, 144, 251, 0.5)',
+            'rgba(96, 46, 158, 0.5)',
+            'rgba(134, 209, 230, 0.5)',
+            'rgba(165, 145, 239, 0.5)',
+            'rgba(78, 171, 241, 0.5)'
+          ]
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              font: {
+                size: 5
+              }
+            }
+          }
+        }
+      }
+    });
+
+    document.getElementById("gerar-pdf").addEventListener("click", () => {
+      html2canvas(document.querySelector("#dashboard")).then(canvas => {
+        const imgData = canvas.toDataURL("image/png");
+        const pdf = new jspdf.jsPDF();
+        pdf.addImage(imgData, "PNG", 10, 10, 190, 0); // Ajuste os valores conforme necessário
+        pdf.save("pagina.pdf");
+      });
+    });
+
+  </script>
 </body>
 
 </html>
