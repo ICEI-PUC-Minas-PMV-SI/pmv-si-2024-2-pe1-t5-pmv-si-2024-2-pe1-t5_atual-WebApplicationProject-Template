@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Construir o caminho dinâmico para o arquivo header.html
   const currentPath = window.location.pathname;
-  const depth = (currentPath.match(/\//g) || []).length - 1; // Conta os níveis no path
-  const headerPath = '../'.repeat(depth) + 'header.html'; // Sobe os níveis necessários
+  const depth = (currentPath.match(/\//g) || []).length - 1;
+  const headerPath = '../'.repeat(depth) + 'header.html';
 
-  // Carregar a header
   fetch(headerPath)
     .then(response => {
       if (!response.ok) {
@@ -14,14 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       document.getElementById('header-placeholder').innerHTML = data;
-
-      // Inicializar eventos e atualizações da header
       initializeHeader();
     })
     .catch(err => console.error(err));
 });
 
-// Inicializar eventos e comportamentos da header
 function initializeHeader() {
   // Atualizar estado de login na header
   updateHeader();
@@ -80,8 +75,6 @@ function updateHeader() {
     loggedOutElements.forEach(el => el.classList.remove('hidden'));
     loggedInElements.forEach(el => el.classList.add('hidden'));
   }
-
-  // Logout
   const logoutButton = document.getElementById('logout');
   if (logoutButton) {
     logoutButton.addEventListener('click', (e) => {
