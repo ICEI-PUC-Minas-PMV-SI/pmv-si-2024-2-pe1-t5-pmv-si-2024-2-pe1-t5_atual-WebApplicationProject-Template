@@ -18,30 +18,14 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <meta charset="UTF-8">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="../gerais/geral.css">
 
 </head>
 
 <body>
-    <header>
-        <div id="div-logotipo">
-            <img id="logotipo" src="https://cdn.icon-icons.com/icons2/2070/PNG/512/toucan_icon_125604.png" alt="">
-        </div>
-
-        <div id="div-navbar">
-            <nav id="navbar">
-                <a class="opcao-pagina" href="">HOME</a>
-                <a class="opcao-pagina" href="">NOTICIAS</a>
-                <a class="opcao-pagina" href="">EVENTOS</a>
-                <a class="opcao-pagina" href="">QUEM SOMOS</a>
-            </nav>
-
-            <div id="div-user-icon">
-                <img id="user-icon" src="https://icons.veryicon.com/png/o/miscellaneous/bitisland-world/person-18.png"
-                    alt="">
-            </div>
-        </div>
-
-    </header>
+    <script src="../../header.js"></script>
+    <div id="header-placeholder"></div>
 
     <div class="center">
         <h2>PRÓXIMOS EVENTOS</h2>
@@ -72,45 +56,54 @@
                     <a href="tel:+553134083000" class="botao-ligacao"><img src="telefone.png" alt "Icones" width="20"
                             height="20" ;> CONTATO</a>
                 </div>
-                <!--VER ESPAÇO-->
-                <button id="openPopup" class="botao-ligacao"><img src="icon.png" alt="Icones" width="20" height="20">
-                    VOLUNTÁRIOS </button>
-                <div class="overlay" id="overlay"></div>
-                <div class="popup" id="popup">
-                    <p>Tem interesse em se voluntariar? Preencha o formulário abaixo e um dos responsáveis entrará em
-                        contato com você! </p>
-                    <form id="myForm">
-                        <div class="center">
-                            <input type="text" id="inputText" placeholder="NOME COMPLETO" required>
-                            <br>
-                            <input type="text" id="inputText" placeholder="TELEFONE" required>
-                            <br>
-                        </div>
-                    </form>
 
-                    <p></p>
-                    <div class="center">
-                        <buton id="closePopup">ENVIAR</buton>
+                <button id="botao" onclick="abrirPopup()" class="botao-ligacao"><img src="icon.png" alt="Icones"
+                        width="20" height="20">VOLUNTÁRIOS</button>
+
+
+                <div id="popup-overlay" onclick="fecharPopup()"></div>
+
+
+                <div id="popup">
+                    <p>
+                    <h4>Quer se voluntariar? Preencha o formulário abaixo e entraremos em contato!</h4>
+                    </p>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
                     </div>
-
+                    <div class="form-group">
+                        <label for="telefone">Telefone para contato:</label>
+                        <input type="text" id="telefone" placeholder="Digite seu telefone">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Seu melhor e-mail:</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail">
+                    </div>
+                    <button onclick="enviarFormulario()">ENVIAR</button>
+                    <button onclick="fecharPopup()">FECHAR</button>
                 </div>
-                
+
+
             </div>
+
 
         </div>
 
-
     </div>
-    <P></P>
+
+
+
+    <p></p>
 
     <div>
         <!--iINFORMAÇÃO,LOCALIZAÇÃO E DATA-->
         <div class="info">
-           
+
             <button onclick="mostrarMensagem()" class="botao-ligacao">INFORMAÇÕES</button>
         </div>
         <div class="info">
-            <button onclick="mostrarMensagem()" class="botao-ligacao">LOCALIZAÇÃO</button>
+            <button onclick="mostrarlocal()" class="botao-ligacao">LOCALIZAÇÃO</button>
         </div>
 
         <div class="info">
@@ -275,28 +268,28 @@
                             </div>
                         </form>
 
-                       <p></p>
+                        <p></p>
                         <div class="center">
                             <buton id="closePopup">ENVIAR</buton>
                         </div>
 
                     </div>
-                    
+
                 </div>
 
             </div>
 
 
         </div>
-        <P></P>
+        <p></p>
 
         <div>
             <!--iINFORMAÇÃO,LOCALIZAÇÃO E DATA-->
             <div class="info" justify-content: left;>
-                <button onclick="mostrarMensagem()" class="botao-ligacao">INFORMAÇÕES</button>
+                <button onclick="mostrarMensagem2()" class="botao-ligacao">INFORMAÇÕES</button>
             </div>
             <div class="info">
-                <button onclick="mostrarMensagem()" class="botao-ligacao">LOCALIZAÇÃO</button>
+                <button onclick="mostrarlocal2()" class="botao-ligacao">LOCALIZAÇÃO</button>
             </div>
 
             <div class="info">
@@ -348,36 +341,34 @@
 
         </div>
     </div>
-    </div>
 
     <div class="center">
-        <div class="conteudo" id="conteudo">
-            <p>Sem novos eventos no momento!</p>
+
+        <button id="botao" class="botao-ligacao" onclick="exibirMensagem()">VER MAIS</button>
+        <p></p>
+        <p></p>
+        <div id="mensagem" class="conteudo">
+            Sem mais eventos no momento!
         </div>
 
-        <span class="botao" id="botao">VER MAIS</span>
-
-  
     </div>
 
-    <!-- ERROS- segunda página não abre componentes, formulário e o primeiro está mudando para tudo. -->
     <footer>
         <section id="footer-sec">
             <div id="footer-menu">
                 <h3>Projeto ONGs</h3>
-                <a href="">Home</a>
-                <a href="">Noticias</a>
-                <a href="">Eventos</a>
+                <a href="#">Home</a>
+                <a href="./src/Noticia/noticia.html">Noticias</a>
+                <a href="./src/eventos2/index.html">Eventos</a>
                 <a href="">Voluntariados - Informações</a>
                 <a href="">FAQ</a>
                 <a href="">Trabalhe Conosco</a>
                 <a href="">Termos do Site e Politica de privacidade</a>
                 <section id="footer-redes">
-                    <img src="../img/ig-icon.png" alt="ig">
-                    <img src="../img/face-icon.png" alt="fc">
-                    <img src="../img/x-icon.png" alt="tt">
-                    <img style="background-color: white; border-radius: 100%;" src="../img/lkd-icon.png" alt="lkin">
-                    <img src="../img/github-icon.png" alt="github">
+                    <img src="../img/insta-b.png" alt="ig">
+                    <img src="../img/face-b.png" alt="fc">
+                    <img src="../img/lkn-b.png" alt="lkin">
+                    <img src="../img/wpp-b.png" alt="whatsapp">
                 </section>
             </div>
             <div id="footer-infos">
@@ -391,14 +382,13 @@
                 <a href="">Causa Animal</a>
             </div>
         </section>
-        <div id="footer-contato">
-            <input placeholder="Nome..." type="text">
-            <input placeholder="Sobrenome..." type="text">
-            <input placeholder="Seu e-mail..." type="email">
-            <textarea placeholder="Escreva sua mensagem..." name="" id=""></textarea>
-            <button>enviar</button>
-        </div>
-
+        <form id="footer-contato">
+            <input id="nomeContato" required placeholder="*Nome..." type="text">
+            <input id="sobrenomeContato" placeholder="*Sobrenome..." type="text">
+            <input id="emailContato" placeholder="*Seu e-mail..." type="email">
+            <textarea id="msgContato" placeholder="*Escreva sua mensagem..." name="" id=""></textarea>
+            <button onclick="enviaInfosContato()" type="button">enviar</button>
+        </form>
     </footer>
 
 
