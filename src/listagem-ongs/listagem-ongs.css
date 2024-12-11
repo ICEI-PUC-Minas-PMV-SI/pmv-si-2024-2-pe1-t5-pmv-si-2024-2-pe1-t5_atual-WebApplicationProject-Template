@@ -21,12 +21,15 @@ body {
   background-color: #4e4e4e;
   color: #ffffff;
   padding: 1rem;
+  border-right: 2px solid #333;
 }
 
 .menu-icon {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .checkboxes label {
@@ -55,6 +58,12 @@ body {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #2190fb;
+  outline: none;
 }
 
 /* Resultados */
@@ -73,6 +82,12 @@ body {
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.result-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .image-placeholder img {
@@ -83,6 +98,11 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #86d1e6;
   margin-bottom: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.image-placeholder img:hover {
+  transform: scale(1.05);
 }
 
 .title {
@@ -106,6 +126,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -115,10 +136,6 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
   .sidebar {
-    display: none;
-  }
-
-  #navbar {
     display: none;
   }
 
@@ -133,7 +150,7 @@ body {
   }
 
   .result-item .image-placeholder img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }
 }
