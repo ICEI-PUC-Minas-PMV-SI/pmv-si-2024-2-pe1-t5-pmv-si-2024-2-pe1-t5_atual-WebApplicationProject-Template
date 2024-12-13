@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login e Cadastro</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login-cadastro.css" />
+  </head>
+  <body>
+    <!-- Botões para abrir os modais -->
+    <main>
+      <button id="openLoginModalBtn" class="btn">Login</button>
+      <button id="openSignupModalBtn" class="btn">Cadastro</button>
+    </main>
+
+    <!-- Modal de Login -->
+    <div
+      id="loginModal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="loginTitle"
+    >
+      <div class="modal-content">
+        <span class="close" aria-label="Fechar">&times;</span>
+        <h2 id="loginTitle">Login</h2>
+        <div id="mensagem-login" class="mensagem" style="display: none"></div>
+        <form>
+          <label for="email-login">Email</label>
+          <input type="email" id="email-login" name="email" required />
+          <span id="error-email-login" class="error-message"></span>
+
+          <label for="password-login">Senha</label>
+          <input type="password" id="password-login" name="password" required />
+          <span id="error-password-login" class="error-message"></span>
+
+          <button type="submit" class="btn">Entrar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal de Cadastro -->
+    <div
+      id="signupModal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="signupTitle"
+    >
+      <div class="modal-content">
+        <span class="close" aria-label="Fechar">&times;</span>
+        <h2 id="signupTitle">Cadastro</h2>
+        <div id="mensagem-signup" class="mensagem" style="display: none"></div>
+        <form>
+          <label for="username">Nome</label>
+          <input type="text" id="username" name="username" required />
+          <span id="error-username" class="error-message"></span>
+
+          <label for="email-signup">Email</label>
+          <input type="email" id="email-signup" name="email" required />
+          <span id="error-email-signup" class="error-message"></span>
+
+          <label for="newPassword">Senha</label>
+          <input type="password" id="newPassword" name="newPassword" required />
+          <span id="error-password" class="error-message"></span>
+
+          <label for="userType">Tipo de Usuário</label>
+          <select id="userType" name="userType" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="doador">Doador</option>
+            <option value="instituicao">Instituição(ONG)</option>
+          </select>
+          <span id="error-userType" class="error-message"></span>
+
+          <button type="submit" class="btn">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+    <script src="login-cadastro.js"></script>
+  </body>
+</html>

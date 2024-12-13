@@ -1,0 +1,273 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+span {
+    display: flex;
+    height: 2vw;
+}
+
+/* Container Principal */
+#containerP {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    margin-left: 2%;
+    justify-content: left;
+    padding: 30px 2px;
+}
+
+#noticiaP-right {
+    border-radius: 15px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+#tituloP {
+    margin-top: 10%;
+    margin-left: 5%;
+    width: 95%;
+    font-size: 32px;
+    font-weight: bold;/
+}
+
+#textoP {
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 90%;
+    font-weight: normal;
+    font-size: 1rem;
+    font-size: 20px;
+
+}
+
+#noticiaP-left {
+    margin-right: 5%;
+    border-radius: 15px;
+    flex: 1;
+
+}
+
+.box {
+    height: 200px;
+    width: 100%;
+    margin-right: 5%;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    bottom: 0;
+    position: relative;
+}
+
+.subTitulo {
+    position: absolute;
+    /* Para posicionar dentro do elemento pai */
+    bottom: 0;
+    left: 0;
+    width: 50vh;
+    color: #000000;
+    padding: 10px;
+    /* Opcional: para espaçamento extra */
+}
+
+
+/*** SEGUNDA PARTE ***/
+/* Esqueleto */
+/*Left*/
+
+#container2 {
+    min-height: 1050px;
+    width: 100%;
+    display: flex;
+    gap: 2%;
+}
+
+
+#leftNoticias {
+    display: grid;
+    align-items: left;
+    gap: 2%;
+    max-width: 60%;
+    margin: 20px auto;
+}
+
+.noticias {
+    display: flex;
+    height: 100%;
+    gap: 2%;
+}
+
+.outrosBox {
+    height: 100%;
+    width: 50%;
+    border-radius: 20px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(1);
+}
+
+.texto {
+    margin-top: 2%;
+    height: 80%;
+    width: 60%;
+}
+
+.tituloOutros {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+h3 {
+    margin-top: 5%;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+.outrasN {
+    margin-top: 2%;
+}
+
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+/*Right*/
+#topAssuntos {
+    margin-top: 2%;
+    display: grid;
+    width: 33%;
+    height: 50%;
+    border-left: none;
+    /* Remove qualquer borda sólida */
+    background-image: linear-gradient(to right, #333 0%, transparent 100%);
+    background-size: 1px 100%;
+    /* Define a largura da borda */
+    background-repeat: no-repeat;
+    /* Evita que o gradiente se repita */
+    transition: background-size 0.3s ease;
+    /* Suaviza o efeito */
+}
+
+#top {
+    margin-left: 2%;
+}
+
+.top1 {
+
+    font-size: 1.1rem;
+    margin-top: 10%;
+    font-weight: bold;
+    color: black;
+}
+
+p {
+    font-size: 1rem;
+    margin-top: 2%;
+    font-weight: normal;
+}
+
+/*Imagens*/
+
+#box1 {
+    background-image: url(../imgNoticia/coracao.jpg);
+    aspect-ratio: 16/9;
+}
+
+#box2 {
+    margin-top: 20px;
+    background-image: url(../imgNoticia/sangue.jpg);
+    aspect-ratio: 16/9;
+}
+
+.visu,
+        #imagem1 {
+            background-image: url(../imgNoticia/Mulher.jpg);
+        }
+
+        #imagem2 {
+            background-image: url(../imgNoticia/Rio.jpeg);
+        }
+
+        #imagem3 {
+            background-image: url(../imgNoticia/Fome.jpg);
+        }
+
+        #imagem4 {
+            background-image: url(../imgNoticia/ONGs.jpeg);
+        }
+
+/*Fim*/
+
+
+/* Media Queries para melhorar a responsividade */
+@media (max-width: 768px) {
+    #containerP {
+        flex-direction: column;
+    }
+    #noticiaP-right {
+        width: 100%;
+    }
+    .box {
+        width: 100%;
+    }
+    .outrosBox, .box {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Garante que a imagem não distorça */
+        margin: 10px 0; /* Espaço vertical */
+    }
+    #container2 {
+        flex-direction: column;
+        align-items: flex-start; /* Evita a centralização */
+        justify-content: flex-start; /* Se necessário */
+        padding: 10px; /* Ajuste conforme necessário */
+        
+    }
+    #leftNoticias {
+        width: 100%;
+        margin: 0; /* Remover centralização */
+        max-width: 100%;
+    }
+    #topAssuntos{
+        display: none;
+    }
+    .box{
+        background-size: cover;
+        background-position: center;
+    }
+    .outrosBox {
+        max-width: 350px;
+        max-height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #leftnoticias {
+        width: 100%;
+    }
+  
+    #topAssuntos {
+        display: none;
+    }
+
+}
